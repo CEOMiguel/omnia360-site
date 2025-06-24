@@ -8,7 +8,28 @@ body{font-family:Segoe UI,sans-serif;margin:0;font-size:120%;color:#1a1a1a;backg
   padding: 1rem 2rem;
   color: white;
   font-family: 'Segoe UI', sans-serif;
-"> <!-- Logo a la izquierda --> <a href="/" style="display: flex; align-items: center; gap: 0.5rem;"> <img src="/logo-omnia.png" alt="Logo Omnia360" style="height: 120px;"> </a> <!-- Enlaces de navegación --> <div style="display: flex; gap: 1rem;"> <a href="/" style="color: white; text-decoration: none;">Inicio</a> <a href="/mindgrow" style="color: white; text-decoration: none;">MindGrow</a> <a href="/contacto" style="color: white; text-decoration: none;">Contacto</a> </div> </nav>   <section style="text-align: center; padding: 4rem 2rem; background: linear-gradient(to right, #1e3a8a, #2563eb); color: white;"> <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Bienvenido a MindGrow</h1> <p style="font-size: 1.2rem;">Impulsamos el aprendizaje con inteligencia artificial adaptativa.</p> </section>  <section class="section-blur" data-astro-cid-6xrsmaz4> <h2 data-astro-cid-6xrsmaz4>¿Qué es MindGrow?</h2> <p style="max-width: 700px; margin: auto;" data-astro-cid-6xrsmaz4>
+"> <!-- Logo a la izquierda --> <a href="/" style="display: flex; align-items: center; gap: 0.5rem;"> <img src="/logo-omnia.png" alt="Logo Omnia360" style="height: 120px;"> </a> <!-- Enlaces de navegación con menú desplegable --> <div style="display: flex; gap: 1rem; align-items: center; position: relative;"> <a href="/" style="color: white; text-decoration: none;">Inicio</a> <!-- Menú desplegable de proyectos --> <div style="position: relative;"> <a href="#" style="color: white; text-decoration: none;">Proyectos ▾</a> <div style="
+      display: none;
+      position: absolute;
+      background-color: #0a0a23;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1000;
+      border-radius: 4px;
+    " class="dropdown-content"> <a href="/mindgrow" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">MindGrow</a> <a href="/otros-proyectos/iapyme" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">IAPyme</a> <a href="/otros-proyectos/guardia360" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">GuardIA360</a> <a href="/otros-proyectos/omnia-data" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">Omnia Data</a> <a href="/otros-proyectos/ia360" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">IA360</a> </div> </div> <a href="/contacto" style="color: white; text-decoration: none;">Contacto</a> </div> <!-- Script para mostrar el menú al pasar el mouse --> <script type="text/javascript">
+  const dropdown = document.querySelector('.dropdown-content');
+  const parent = dropdown.parentElement;
+
+  parent.addEventListener('mouseenter', () => {
+    dropdown.style.display = 'block';
+  });
+
+  parent.addEventListener('mouseleave', () => {
+    dropdown.style.display = 'none';
+  });
+</script> </nav>   <section style="text-align: center; padding: 4rem 2rem; background: linear-gradient(to right, #1e3a8a, #2563eb); color: white;"> <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Bienvenido a MindGrow</h1> <p style="font-size: 1.2rem;">Impulsamos el aprendizaje con inteligencia artificial adaptativa.</p> </section>  <section class="section-blur" data-astro-cid-6xrsmaz4> <h2 data-astro-cid-6xrsmaz4>¿Qué es MindGrow?</h2> <p style="max-width: 700px; margin: auto;" data-astro-cid-6xrsmaz4>
 MindGrow es una plataforma educativa que combina inteligencia artificial con pedagogía personalizada. Su objetivo es apoyar el aprendizaje de forma continua, adaptándose al ritmo y estilo de cada estudiante.
       Diseñada para acompañar desde etapas tempranas hasta desafíos avanzados, MindGrow promueve la autonomía y el pensamiento crítico.
 </p> </section>  <section class="section-dark" data-astro-cid-6xrsmaz4> <h2 data-astro-cid-6xrsmaz4>¿Qué puedes esperar de MindGrow?</h2> <ul data-astro-cid-6xrsmaz4> <li data-astro-cid-6xrsmaz4>Acompañamiento personalizado que evoluciona contigo.</li> <li data-astro-cid-6xrsmaz4>Contenido interactivo que potencia la comprensión.</li> <li data-astro-cid-6xrsmaz4>Seguimiento constante del progreso.</li> <li data-astro-cid-6xrsmaz4>Retroalimentación positiva y orientada al desarrollo personal.</li> </ul> </section>  <section class="section-blur" data-astro-cid-6xrsmaz4> <h2 data-astro-cid-6xrsmaz4>Educación centrada en el estudiante</h2> <p style="max-width: 700px; margin: auto;" data-astro-cid-6xrsmaz4>

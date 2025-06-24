@@ -8,7 +8,28 @@ body{font-family:Segoe UI,sans-serif;margin:0;font-size:120%;color:#1a1a1a;backg
   padding: 1rem 2rem;
   color: white;
   font-family: 'Segoe UI', sans-serif;
-"> <!-- Logo a la izquierda --> <a href="/" style="display: flex; align-items: center; gap: 0.5rem;"> <img src="/logo-omnia.png" alt="Logo Omnia360" style="height: 120px;"> </a> <!-- Enlaces de navegación --> <div style="display: flex; gap: 1rem;"> <a href="/" style="color: white; text-decoration: none;">Inicio</a> <a href="/mindgrow" style="color: white; text-decoration: none;">MindGrow</a> <a href="/contacto" style="color: white; text-decoration: none;">Contacto</a> </div> </nav>    <header class="hero" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>BIENVENIDOS A OMNIA360</h1> <p data-astro-cid-j7pv25f6>
+"> <!-- Logo a la izquierda --> <a href="/" style="display: flex; align-items: center; gap: 0.5rem;"> <img src="/logo-omnia.png" alt="Logo Omnia360" style="height: 120px;"> </a> <!-- Enlaces de navegación con menú desplegable --> <div style="display: flex; gap: 1rem; align-items: center; position: relative;"> <a href="/" style="color: white; text-decoration: none;">Inicio</a> <!-- Menú desplegable de proyectos --> <div style="position: relative;"> <a href="#" style="color: white; text-decoration: none;">Proyectos ▾</a> <div style="
+      display: none;
+      position: absolute;
+      background-color: #0a0a23;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1000;
+      border-radius: 4px;
+    " class="dropdown-content"> <a href="/mindgrow" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">MindGrow</a> <a href="/otros-proyectos/iapyme" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">IAPyme</a> <a href="/otros-proyectos/guardia360" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">GuardIA360</a> <a href="/otros-proyectos/omnia-data" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">Omnia Data</a> <a href="/otros-proyectos/ia360" style="display: block; padding: 0.5rem 1rem; color: white; text-decoration: none;">IA360</a> </div> </div> <a href="/contacto" style="color: white; text-decoration: none;">Contacto</a> </div> <!-- Script para mostrar el menú al pasar el mouse --> <script type="text/javascript">
+  const dropdown = document.querySelector('.dropdown-content');
+  const parent = dropdown.parentElement;
+
+  parent.addEventListener('mouseenter', () => {
+    dropdown.style.display = 'block';
+  });
+
+  parent.addEventListener('mouseleave', () => {
+    dropdown.style.display = 'none';
+  });
+</script> </nav>    <header class="hero" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>BIENVENIDOS A OMNIA360</h1> <p data-astro-cid-j7pv25f6>
 Impulsamos el cambio a través de soluciones basadas en inteligencia artificial. Nuestra misión es transformar el aprendizaje, potenciar negocios y proteger comunidades mediante tecnología avanzada.
 </p> </header>  <section id="proyectos" class="proyectos" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Proyectos Destacados</h2> <button class="nav-btn nav-left" data-astro-cid-j7pv25f6>&#8592;</button> <button class="nav-btn nav-right" data-astro-cid-j7pv25f6>&#8594;</button> <div class="slider-container" data-astro-cid-j7pv25f6> <div class="slider" data-astro-cid-j7pv25f6> <div class="card" data-astro-cid-j7pv25f6> <img src="/img/mindgrow.webp" alt="MindGrow" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>MindGrow</h3> <p data-astro-cid-j7pv25f6>
 Plataforma de tutoría personalizada que adapta el aprendizaje a cada estudiante, reduciendo brechas y aumentando el compromiso.
