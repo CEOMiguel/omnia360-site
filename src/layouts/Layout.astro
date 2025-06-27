@@ -17,23 +17,46 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
 
-    <!-- AOS (Animate On Scroll) CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-    />
-
     <!-- Head slot para inyectar estilos o scripts adicionales -->
     <slot name="head" />
 
     <style>
       body {
         font-family: 'Segoe UI', sans-serif;
+        position: relative;
         margin: 0;
-        font-size: 120%;
-        color: #1a1a1a;
-        background: url('{background}') no-repeat center center fixed;
+        background: url('/bg-mindgrow.png') no-repeat center center fixed;
         background-size: cover;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.78); /* Puedes subir o bajar el 0.5 según claridad deseada */
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .bg-cover::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: url('/bg-mindgrow.png') no-repeat center center;
+        background-size: cover;
+        z-index: -1;
+        opacity: 1;
+      }
+
+      .section-blur,
+      .section-white,
+      .feature-section,
+      footer {
+        position: relative;
+        z-index: 1;
       }
 
       .section-blur {
@@ -97,21 +120,13 @@ const {
     </style>
   </head>
 
-  <body>
+  <body style="background: url('/bg-mindgrow.png') no-repeat center center fixed; background-size: cover;">
+
     <Navbar />
 
     <!-- Contenido dinámico de cada página -->
     <slot />
 
     {showFooter && <Footer type={footerType} />}
-
-    <!-- AOS JS desde CDN (Animaciones al hacer scroll) -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000, // duración de animaciones
-        once: false     // true si quieres que solo se animen una vez
-      });
-    </script>
   </body>
 </html>

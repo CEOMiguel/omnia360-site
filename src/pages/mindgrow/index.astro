@@ -1,0 +1,104 @@
+---
+// src/pages/mindgrow/index.astro
+import Layout from '../../layouts/Layout.astro';
+import HeroMindgrow from '../../components/HeroMindgrow.astro';
+import MindgrowFeatures from '../../components/MindgrowFeatures.astro';
+---
+
+<Layout
+  title="MindGrow | Educación Inteligente"
+  showFooter={true}
+  footerType="mindgrow"
+  background="/bg-mindgrow.png"
+>
+  <Fragment slot="head">
+    <style>
+      .section-blur {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        padding: 3rem 2rem;
+        max-width: 960px;
+        margin: 3rem auto;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .section-dark {
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        backdrop-filter: blur(4px);
+        padding: 3rem 2rem;
+        max-width: 960px;
+        margin: 3rem auto;
+        border-radius: 1rem;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        line-height: 1.8;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      ul li::before {
+        content: '✓';
+        color: #0077cc;
+        margin-right: 0.5rem;
+      }
+
+      .btn-link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        text-align: center;
+        background: #0077cc;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </Fragment>
+
+  <HeroMindgrow />
+
+  <!-- Introducción -->
+  <section class="section-blur">
+    <h2>¿Qué es MindGrow?</h2>
+    <p style="max-width: 700px; margin: auto;">
+      MindGrow es una plataforma educativa que combina inteligencia artificial con pedagogía personalizada. Su objetivo es apoyar el aprendizaje de forma continua, adaptándose al ritmo y estilo de cada estudiante.
+      Diseñada para acompañar desde etapas tempranas hasta desafíos avanzados, MindGrow promueve la autonomía y el pensamiento crítico.
+    </p>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="section-dark">
+    <h2>¿Qué puedes esperar de MindGrow?</h2>
+    <ul>
+      <li>Acompañamiento personalizado que evoluciona contigo.</li>
+      <li>Contenido interactivo que potencia la comprensión.</li>
+      <li>Seguimiento constante del progreso.</li>
+      <li>Retroalimentación positiva y orientada al desarrollo personal.</li>
+    </ul>
+  </section>
+
+  <!-- Sección con características (imagenes) -->
+  <MindgrowFeatures />
+
+  <!-- Llamado a la acción -->
+  <section class="section-blur">
+    <h2>Educación centrada en el estudiante</h2>
+    <p style="max-width: 700px; margin: auto;">
+      Nuestro compromiso es crear experiencias educativas más justas, dinámicas y centradas en las personas. Si compartes esta visión, súmate a nuestra comunidad o explora cómo MindGrow puede integrarse en tu institución.
+    </p>
+    <div style="text-align: center;">
+      <a class="btn-link" href="/contacto">Solicitar más información</a>
+    </div>
+  </section>
+</Layout>
