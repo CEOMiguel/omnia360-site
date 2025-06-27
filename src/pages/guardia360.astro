@@ -1,0 +1,63 @@
+---
+// src/pages/guardia360.astro
+import Layout from '../layouts/Layout.astro';
+
+const {
+  title = 'GuardIA360 - Seguridad Inteligente con IA',
+  background = '/bg-omnia360.jpg'
+} = Astro.props;
+---
+
+<Layout title={title} background={background}>
+  <section class="hero">
+    <h1>GuardIA360</h1>
+    <p>Transforma la seguridad de tu comunidad con inteligencia artificial.</p>
+  </section>
+
+  <section class="section-blur">
+    <h2>¿Qué es GuardIA360?</h2>
+    <p>
+      GuardIA360 es una solución tecnológica avanzada que integra inteligencia artificial para
+      monitorear, detectar y alertar sobre posibles amenazas en comunidades residenciales, edificios y recintos públicos o privados. 
+      Utiliza análisis de video en tiempo real, reconocimiento facial, y aprendizaje automático para actuar con rapidez y precisión.
+    </p>
+  </section>
+
+  <section class="section-white">
+    <h2>Beneficios de GuardIA360</h2>
+    <ul>
+      <li>🔍 Detección automática de intrusos y comportamientos sospechosos en tiempo real.</li>
+      <li>🎯 Identificación facial y gestión de accesos con máxima precisión.</li>
+      <li>📈 Informes detallados de incidentes y patrones de seguridad.</li>
+      <li>📱 Acceso remoto desde tu smartphone o computadora.</li>
+      <li>🤖 IA entrenada para adaptarse a tus necesidades específicas.</li>
+    </ul>
+  </section>
+
+  <section class="section-blur">
+    <h2>¿Para quién está diseñado?</h2>
+    <p>
+      GuardIA360 está pensado para:
+    </p>
+    <ul>
+      <li>🏢 Edificios residenciales y condominios</li>
+      <li>🏫 Colegios e instituciones educativas</li>
+      <li>🏭 Parques industriales y fábricas</li>
+      <li>🏥 Centros de salud y clínicas</li>
+      <li>🏙️ Municipios y gobiernos locales</li>
+    </ul>
+  </section>
+
+  <section class="section-white">
+    <h2>Integración y tecnología</h2>
+    <p>
+      Nuestra solución se integra fácilmente con cámaras de vigilancia existentes, y se complementa con servidores en la nube o en sitio local. GuardIA360 utiliza APIs modernas, bases de datos seguras, y modelos de IA actualizados para garantizar el mejor desempeño.
+    </p>
+  </section>
+
+  <section class="hero">
+    <h2>¿Quieres saber más?</h2>
+    <p>Contáctanos para una demo personalizada y descubre cómo GuardIA360 puede proteger tu comunidad.</p>
+    <a href="/contacto" class="btn">Solicitar Demo</a>
+  </section>
+</Layout>

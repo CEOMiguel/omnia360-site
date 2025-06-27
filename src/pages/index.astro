@@ -1,11 +1,243 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Omnia360 | Soluciones Tecnológicas con IA"
+  showFooter={true}
+  footerType="home"
+>
+  <Fragment slot="head">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f7f9fc;
+        color: #1a1a1a;
+      }
+
+      header.hero {
+        background-color: #003366;
+        color: #fff;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+
+      header.hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      header.hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      section.proyectos {
+        padding: 4rem 2rem;
+        text-align: center;
+        background-color: #ffffff;
+        position: relative;
+      }
+
+      .proyectos h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #003366;
+      }
+
+      .slider-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slider {
+        display: flex;
+        gap: 2rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 1rem;
+        scroll-snap-type: x mandatory;
+      }
+
+      .slider::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .slider::-webkit-scrollbar-thumb {
+        background-color: #999;
+        border-radius: 4px;
+      }
+
+      .card {
+        flex: 0 0 360px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 2rem;
+        transform: scale(1.2);
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        scroll-snap-align: start;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .card h3 {
+        font-size: 1.4rem;
+        color: #003366;
+        margin-bottom: 0.5rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+
+      .card a.btn {
+        display: inline-block;
+        background: #003366;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+      }
+
+      .card a.btn:hover {
+        background: #00509e;
+      }
+
+      /* Botones flechas navegación */
+.nav-btn {
+  position: fixed;
+  bottom: 80px;
+  background: #003366;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background 0.3s ease;
+}
+
+.nav-left {
+  left: 1rem;
+}
+
+.nav-right {
+  right: 1rem;
+}
+
+.nav-btn:hover {
+  background: #00509e;
+}
+
+
+      .nav-left {
+        left: 1rem;
+      }
+
+      .nav-right {
+        right: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        .nav-btn {
+          display: none;
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.querySelector('.slider');
+        document.querySelector('.nav-left').addEventListener('click', () => {
+          slider.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        document.querySelector('.nav-right').addEventListener('click', () => {
+          slider.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+      });
+    </script>
+  </Fragment>
+
+  <!-- Hero: Bienvenida -->
+  <header class="hero">
+    <h1>BIENVENIDOS A OMNIA360</h1>
+    <p>
+      Impulsamos el cambio a través de soluciones basadas en inteligencia artificial. Nuestra misión es transformar el aprendizaje, potenciar negocios y proteger comunidades mediante tecnología avanzada.
+    </p>
+  </header>
+
+  <!-- Proyectos con scroll y botones -->
+  <section id="proyectos" class="proyectos">
+    <h2>Proyectos Destacados</h2>
+
+    <button class="nav-btn nav-left">&#8592;</button>
+    <button class="nav-btn nav-right">&#8594;</button>
+
+    <div class="slider-container">
+      <div class="slider">
+        <div class="card">
+          <img src="/img/mindgrow.webp" alt="MindGrow" />
+          <h3>MindGrow</h3>
+          <p>
+            Plataforma de tutoría personalizada que adapta el aprendizaje a cada estudiante, reduciendo brechas y aumentando el compromiso.
+          </p>
+          <a href="/mindgrow" class="btn">Ver más</a>
+        </div>
+        <div class="card">
+          <img src="/img/iapyme.webp" alt="IAPyme" />
+          <h3>IAPyme</h3>
+          <p>
+            Asistente digital que automatiza procesos clave en pequeñas empresas, optimizando tiempos y mejorando la atención al cliente.
+          </p>
+          <a href="#" class="btn">Ver más</a>
+        </div>
+        <div class="card">
+          <img src="/img/guardia360.webp" alt="GuardIA360" />
+          <h3>GuardIA360</h3>
+          <p>
+            Sistema de seguridad inteligente que utiliza análisis de video con IA para proteger comunidades y espacios urbanos.
+          </p>
+          <a href="#" class="btn">Ver más</a>
+        </div>
+        <div class="card">
+          <img src="/img/omnia-data.webp" alt="Omnia Data" />
+          <h3>Omnia Data</h3>
+          <p>
+            Herramienta de visualización y análisis de datos que facilita decisiones estratégicas basadas en evidencia.
+          </p>
+          <a href="#" class="btn">Ver más</a>
+        </div>
+        <div class="card">
+          <img src="/img/ia360.webp" alt="IA360" />
+          <h3>IA360</h3>
+          <p>
+            Asistentes virtuales que automatizan tareas repetitivas y aumentan la productividad en entornos empresariales modernos.
+          </p>
+          <a href="#" class="btn">Ver más</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

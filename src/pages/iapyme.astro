@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="IAPyme | Asistente IA para pequeñas empresas"
+  showFooter={true}
+  footerType="default"
+  background="/bg-omnia360.webp"
+>
+  <Fragment slot="head">
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        background: url('/bg-omnia360.webp') no-repeat center center fixed;
+        background-size: cover;
+        color: #0d0d0d;
+      }
+
+      .section {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(8px);
+        margin: 4rem auto;
+        max-width: 960px;
+        border-radius: 1rem;
+        padding: 3rem;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      }
+
+      h1, h2 {
+        color: #002244;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .cta {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .cta a {
+        background: #0077cc;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .cta a:hover {
+        background: #005fa3;
+      }
+    </style>
+  </Fragment>
+
+  <section class="section">
+    <h1>IAPyme</h1>
+    <p>
+      <strong>IAPyme</strong> es un asistente inteligente diseñado para pequeñas y medianas empresas que buscan optimizar sus procesos, mejorar su atención al cliente y tomar decisiones con respaldo de datos.
+    </p>
+    <p>
+      Gracias a tecnologías de inteligencia artificial, IAPyme automatiza tareas repetitivas, entrega respuestas rápidas a clientes y proporciona recomendaciones estratégicas en base al comportamiento y necesidades del negocio.
+    </p>
+
+    <h2>¿Qué puede hacer IAPyme por tu empresa?</h2>
+    <ul>
+      <li>Automatizar respuestas frecuentes en WhatsApp, redes sociales y correo.</li>
+      <li>Asistir en la creación de presupuestos, cotizaciones y propuestas comerciales.</li>
+      <li>Realizar seguimiento de clientes y enviar recordatorios automáticos.</li>
+      <li>Generar informes de desempeño y proyecciones personalizadas.</li>
+      <li>Integrarse fácilmente con plataformas ya existentes.</li>
+    </ul>
+
+    <h2>Casos de uso reales</h2>
+    <p>
+      Una tienda de artículos de oficina redujo un 70% el tiempo de atención a clientes, mientras que un pequeño taller mecánico duplicó su número de cotizaciones mensuales usando IAPyme.
+    </p>
+
+    <div class="cta">
+      <a href="/contacto">Agenda una demostración</a>
+    </div>
+  </section>
+</Layout>

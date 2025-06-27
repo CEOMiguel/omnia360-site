@@ -1,0 +1,93 @@
+---
+// Componente que muestra 5 secciones con imagen y texto alternados en zigzag usando AOS
+---
+
+<style>
+  .feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .feature:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .feature img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .feature h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #003366;
+  }
+
+  @media (max-width: 768px) {
+    .feature {
+      flex-direction: column !important;
+    }
+  }
+</style>
+
+<div class="feature-section">
+  <div class="feature" data-aos="fade-up">
+    <img src="/alumno.webp" alt="Interacción humano-IA" loading="lazy" />
+    <div class="feature-text">
+      <h3>Interacción humano-IA en la educación</h3>
+      <p>La IA apoya al docente y al estudiante, entregando sugerencias, preguntas y retroalimentación en tiempo real.</p>
+    </div>
+  </div>
+
+  <div class="feature" data-aos="fade-up">
+    <img src="/teacher.webp" alt="Análisis docente con IA" loading="lazy" />
+    <div class="feature-text">
+      <h3>Análisis docente impulsado por IA</h3>
+      <p>Accede a informes sobre progreso, participación y fortalezas académicas de cada estudiante o grupo.</p>
+    </div>
+  </div>
+
+  <div class="feature" data-aos="fade-up">
+    <img src="/student.webp" alt="Aprendizaje personalizado" loading="lazy" />
+    <div class="feature-text">
+      <h3>Aprendizaje adaptativo personalizado</h3>
+      <p>MindGrow se ajusta automáticamente al ritmo, estilo y nivel del estudiante, ofreciendo una experiencia única.</p>
+    </div>
+  </div>
+
+  <div class="feature" data-aos="fade-up">
+    <img src="/students.webp" alt="Diversidad educativa" loading="lazy" />
+    <div class="feature-text">
+      <h3>Acceso equitativo y diversidad educativa</h3>
+      <p>La plataforma promueve la inclusión, integrando tecnologías accesibles para todos los contextos escolares.</p>
+    </div>
+  </div>
+
+  <div class="feature" data-aos="fade-up">
+    <img src="/server.webp" alt="Infraestructura tecnológica" loading="lazy" />
+    <div class="feature-text">
+      <h3>Infraestructura tecnológica confiable</h3>
+      <p>Desarrollada sobre sistemas robustos y escalables que garantizan disponibilidad, seguridad y rendimiento.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+// src/components/Footer.astro
+const { type = 'default' } = Astro.props;
+---
+
+<footer style="background-color: #0a0a23; color: white; padding: 2rem; text-align: center;">
+  {type === 'mindgrow' && (
+    <div>
+      <a href="/contacto" style="color: #ccc; margin-right: 1rem;">Contacto</a>
+      <a href="mailto:contacto@omnia360.cl" style="color: #ccc;">contacto@omnia360.cl</a>
+    </div>
+  )}
+
+  {type === 'default' && (
+    <div>
+      <a href="/contacto" style="color: #ccc; margin-right: 1rem;">Contacto</a>
+      <a href="mailto:contacto@omnia360.cl" style="color: #ccc;">contacto@omnia360.cl</a>
+    </div>
+  )}
+
+  {type === 'simple' && (
+    <p>&copy; 2025 Omnia360 SpA</p>
+  )}
+  
+  <p style="margin-top: 1rem;">&copy; 2025 Omnia360 SpA. Todos los derechos reservados.</p>
+</footer>
