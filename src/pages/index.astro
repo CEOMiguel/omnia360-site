@@ -123,34 +123,20 @@ import Layout from '../layouts/Layout.astro';
         background: #00509e;
       }
 
-      /* Botones flechas navegación */
-.nav-btn {
-  position: fixed;
-  bottom: 80px;
-  background: #003366;
-  border: none;
-  color: white;
-  font-size: 1.8rem;
-  padding: 0.4rem 0.9rem;
-  cursor: pointer;
-  z-index: 1000;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
-}
-
-.nav-left {
-  left: 1rem;
-}
-
-.nav-right {
-  right: 1rem;
-}
-
-.nav-btn:hover {
-  background: #00509e;
-}
-
+      .nav-btn {
+        position: fixed;
+        bottom: 80px;
+        background: #003366;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        padding: 0.4rem 0.9rem;
+        cursor: pointer;
+        z-index: 1000;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        transition: background 0.3s ease;
+      }
 
       .nav-left {
         left: 1rem;
@@ -158,6 +144,10 @@ import Layout from '../layouts/Layout.astro';
 
       .nav-right {
         right: 1rem;
+      }
+
+      .nav-btn:hover {
+        background: #00509e;
       }
 
       @media (max-width: 600px) {
@@ -211,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
           <p>
             Asistente digital que automatiza procesos clave en pequeñas empresas, optimizando tiempos y mejorando la atención al cliente.
           </p>
-          <a href="#" class="btn">Ver más</a>
+          <a href="/iapyme" class="btn">Ver más</a>
         </div>
         <div class="card">
           <img src="/img/guardia360.webp" alt="GuardIA360" />
@@ -219,7 +209,7 @@ import Layout from '../layouts/Layout.astro';
           <p>
             Sistema de seguridad inteligente que utiliza análisis de video con IA para proteger comunidades y espacios urbanos.
           </p>
-          <a href="#" class="btn">Ver más</a>
+          <a href="/guardia360" class="btn">Ver más</a>
         </div>
         <div class="card">
           <img src="/img/omnia-data.webp" alt="Omnia Data" />
@@ -227,7 +217,7 @@ import Layout from '../layouts/Layout.astro';
           <p>
             Herramienta de visualización y análisis de datos que facilita decisiones estratégicas basadas en evidencia.
           </p>
-          <a href="#" class="btn">Ver más</a>
+          <a href="/omnia-data" class="btn">Ver más</a>
         </div>
         <div class="card">
           <img src="/img/ia360.webp" alt="IA360" />
@@ -235,7 +225,7 @@ import Layout from '../layouts/Layout.astro';
           <p>
             Asistentes virtuales que automatizan tareas repetitivas y aumentan la productividad en entornos empresariales modernos.
           </p>
-          <a href="#" class="btn">Ver más</a>
+          <a href="/ia360" class="btn">Ver más</a>
         </div>
       </div>
     </div>
