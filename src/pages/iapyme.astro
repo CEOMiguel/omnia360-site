@@ -19,13 +19,13 @@ import Layout from "../layouts/Layout.astro";
       }
 
       .section {
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         margin: 4rem auto;
         max-width: 1080px;
         border-radius: 1rem;
         padding: 3rem;
-        box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        box-shadow: 0 0 30px rgba(0,0,0,0.08);
       }
 
       h1, h2 {
@@ -49,13 +49,15 @@ import Layout from "../layouts/Layout.astro";
 
       .feature {
         text-align: center;
+        padding: 1rem;
       }
 
       .feature img {
         width: 100%;
         height: auto;
-        border-radius: 8px;
+        border-radius: 12px;
         margin-bottom: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       }
 
       .cta {
@@ -66,11 +68,12 @@ import Layout from "../layouts/Layout.astro";
       .cta a {
         background: #0077cc;
         color: white;
-        padding: 0.9rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 8px;
         text-decoration: none;
         font-weight: bold;
         font-size: 1.1rem;
+        transition: background 0.3s ease;
       }
 
       .cta a:hover {
@@ -82,40 +85,47 @@ import Layout from "../layouts/Layout.astro";
   <section class="section">
     <h1>IApyme</h1>
     <p>
-      <strong>IApyme</strong> es tu asistente inteligente diseñado para pequeñas y medianas empresas que buscan digitalizarse, automatizar procesos y tomar decisiones basadas en datos. A través de tecnologías de inteligencia artificial, IApyme se adapta a tus necesidades y trabaja contigo para mejorar tus resultados.
+      <strong>IApyme</strong> es un asistente inteligente diseñado para pequeñas y medianas empresas que buscan digitalizar sus operaciones, optimizar el tiempo de sus equipos y tomar decisiones basadas en datos reales. Utilizando inteligencia artificial, IApyme automatiza tareas clave de gestión, ventas y atención al cliente, adaptándose a las necesidades de tu negocio.
     </p>
 
     <h2>¿Qué puede hacer IApyme por tu empresa?</h2>
+
     <div class="grid">
       <div class="feature">
-        <img src="/images/respuestas.webp" alt="Automatización de respuestas">
-        <p><strong>Automatizar respuestas frecuentes</strong> en WhatsApp, redes sociales y correo electrónico, ahorrando tiempo en atención al cliente.</p>
+        <img src="/images/respuestas.webp" alt="Automatización de respuestas frecuentes" />
+        <p><strong>Automatización de respuestas frecuentes</strong><br />
+          Responde de forma automática consultas comunes en WhatsApp, redes sociales y correo electrónico. Mejora tu servicio al cliente y ahorra tiempo en tareas repetitivas.
+        </p>
       </div>
+
       <div class="feature">
-        <img src="/images/presupuestos.webp" alt="Creación de presupuestos">
-        <p><strong>Asistir en la creación de presupuestos</strong>, cotizaciones y propuestas comerciales, con formatos claros y listos para enviar.</p>
+        <img src="/images/presupuestos.webp" alt="Generación de presupuestos inteligentes" />
+        <p><strong>Generación de presupuestos inteligentes</strong><br />
+          Crea cotizaciones y propuestas comerciales en segundos, con formatos profesionales, personalizables y listos para enviar a tus clientes.
+        </p>
       </div>
+
       <div class="feature">
-        <img src="/images/alertas.webp" alt="Seguimiento de clientes">
-        <p><strong>Realizar seguimiento de clientes</strong>, gestionar recordatorios y mantener el contacto activo con tus prospectos.</p>
+        <img src="/images/alertas.webp" alt="Seguimiento automático de clientes" />
+        <p><strong>Seguimiento automático de clientes</strong><br />
+          Recibe alertas y recordatorios para hacer seguimiento a cotizaciones, prospectos y oportunidades de venta sin dejar pasar ninguna.
+        </p>
       </div>
+
       <div class="feature">
-        <img src="/images/desempeno.webp" alt="Informes y análisis">
-        <p><strong>Generar informes de desempeño</strong> y proyecciones adaptadas a tu rubro, ayudándote a tomar decisiones informadas.</p>
+        <img src="/images/desempeno.webp" alt="Análisis de desempeño empresarial" />
+        <p><strong>Informes de desempeño y análisis predictivo</strong><br />
+          Visualiza métricas clave de tu negocio, identifica tendencias y accede a reportes automáticos con recomendaciones para tomar mejores decisiones.
+        </p>
       </div>
+
       <div class="feature">
-        <img src="/images/integracion.webp" alt="Integración con plataformas">
-        <p><strong>Integrarse fácilmente</strong> con plataformas que ya usas (Google Sheets, CRMs, Stripe, etc.), sin complicaciones.</p>
+        <img src="/images/integracion.webp" alt="Integración con herramientas existentes" />
+        <p><strong>Integración con tus herramientas actuales</strong><br />
+          Conéctate fácilmente con Google Sheets, CRMs, Stripe y otros sistemas. IApyme se adapta a tu flujo de trabajo sin necesidad de desarrollos complejos.
+        </p>
       </div>
     </div>
-
-    <h2>Casos reales de éxito</h2>
-    <p>
-      Una tienda de artículos de oficina redujo un <strong>70% el tiempo de respuesta</strong> a clientes gracias a IApyme.  
-    </p>
-    <p>
-      Un taller mecánico duplicó la cantidad de cotizaciones mensuales usando nuestras automatizaciones y recordatorios inteligentes.
-    </p>
 
     <div class="cta">
       <a href="/contacto">Agenda una demostración gratuita</a>
