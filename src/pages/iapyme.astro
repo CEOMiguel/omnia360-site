@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-  title="IAPyme | Asistente IA para pequeñas empresas"
+  title="IApyme | Asistente Inteligente para PYMEs"
   showFooter={true}
   footerType="default"
   background="/bg-omnia360.webp"
@@ -19,13 +19,13 @@ import Layout from "../layouts/Layout.astro";
       }
 
       .section {
-        background: rgba(255, 255, 255, 0.88);
-        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
         margin: 4rem auto;
-        max-width: 960px;
+        max-width: 1080px;
         border-radius: 1rem;
         padding: 3rem;
-        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        box-shadow: 0 0 30px rgba(0,0,0,0.1);
       }
 
       h1, h2 {
@@ -35,22 +35,42 @@ import Layout from "../layouts/Layout.astro";
       }
 
       p {
-        line-height: 1.6;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+        font-size: 1.05rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        text-align: center;
+      }
+
+      .feature img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
         margin-bottom: 1rem;
       }
 
       .cta {
-        margin-top: 2rem;
+        margin-top: 3rem;
         text-align: center;
       }
 
       .cta a {
         background: #0077cc;
         color: white;
-        padding: 0.75rem 1.5rem;
+        padding: 0.9rem 2rem;
         border-radius: 8px;
         text-decoration: none;
         font-weight: bold;
+        font-size: 1.1rem;
       }
 
       .cta a:hover {
@@ -60,30 +80,45 @@ import Layout from "../layouts/Layout.astro";
   </Fragment>
 
   <section class="section">
-    <h1>IAPyme</h1>
+    <h1>IApyme</h1>
     <p>
-      <strong>IAPyme</strong> es un asistente inteligente diseñado para pequeñas y medianas empresas que buscan optimizar sus procesos, mejorar su atención al cliente y tomar decisiones con respaldo de datos.
-    </p>
-    <p>
-      Gracias a tecnologías de inteligencia artificial, IAPyme automatiza tareas repetitivas, entrega respuestas rápidas a clientes y proporciona recomendaciones estratégicas en base al comportamiento y necesidades del negocio.
+      <strong>IApyme</strong> es tu asistente inteligente diseñado para pequeñas y medianas empresas que buscan digitalizarse, automatizar procesos y tomar decisiones basadas en datos. A través de tecnologías de inteligencia artificial, IApyme se adapta a tus necesidades y trabaja contigo para mejorar tus resultados.
     </p>
 
-    <h2>¿Qué puede hacer IAPyme por tu empresa?</h2>
-    <ul>
-      <li>Automatizar respuestas frecuentes en WhatsApp, redes sociales y correo.</li>
-      <li>Asistir en la creación de presupuestos, cotizaciones y propuestas comerciales.</li>
-      <li>Realizar seguimiento de clientes y enviar recordatorios automáticos.</li>
-      <li>Generar informes de desempeño y proyecciones personalizadas.</li>
-      <li>Integrarse fácilmente con plataformas ya existentes.</li>
-    </ul>
+    <h2>¿Qué puede hacer IApyme por tu empresa?</h2>
+    <div class="grid">
+      <div class="feature">
+        <img src="/images/respuestas.webp" alt="Automatización de respuestas">
+        <p><strong>Automatizar respuestas frecuentes</strong> en WhatsApp, redes sociales y correo electrónico, ahorrando tiempo en atención al cliente.</p>
+      </div>
+      <div class="feature">
+        <img src="/images/presupuestos.webp" alt="Creación de presupuestos">
+        <p><strong>Asistir en la creación de presupuestos</strong>, cotizaciones y propuestas comerciales, con formatos claros y listos para enviar.</p>
+      </div>
+      <div class="feature">
+        <img src="/images/alertas.webp" alt="Seguimiento de clientes">
+        <p><strong>Realizar seguimiento de clientes</strong>, gestionar recordatorios y mantener el contacto activo con tus prospectos.</p>
+      </div>
+      <div class="feature">
+        <img src="/images/desempeno.webp" alt="Informes y análisis">
+        <p><strong>Generar informes de desempeño</strong> y proyecciones adaptadas a tu rubro, ayudándote a tomar decisiones informadas.</p>
+      </div>
+      <div class="feature">
+        <img src="/images/integracion.webp" alt="Integración con plataformas">
+        <p><strong>Integrarse fácilmente</strong> con plataformas que ya usas (Google Sheets, CRMs, Stripe, etc.), sin complicaciones.</p>
+      </div>
+    </div>
 
-    <h2>Casos de uso reales</h2>
+    <h2>Casos reales de éxito</h2>
     <p>
-      Una tienda de artículos de oficina redujo un 70% el tiempo de atención a clientes, mientras que un pequeño taller mecánico duplicó su número de cotizaciones mensuales usando IAPyme.
+      Una tienda de artículos de oficina redujo un <strong>70% el tiempo de respuesta</strong> a clientes gracias a IApyme.  
+    </p>
+    <p>
+      Un taller mecánico duplicó la cantidad de cotizaciones mensuales usando nuestras automatizaciones y recordatorios inteligentes.
     </p>
 
     <div class="cta">
-      <a href="/contacto">Agenda una demostración</a>
+      <a href="/contacto">Agenda una demostración gratuita</a>
     </div>
   </section>
 </Layout>
